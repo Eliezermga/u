@@ -3,11 +3,10 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Catamaran', sans-serif;
-}
+
 
 .a {
     text-decoration: none;
@@ -18,12 +17,9 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
-/*Partie des 3 icônes*/
-.navbar {
-    background: #ffffff;
-}
 /*Barre de navigation*/
 .head {
     background-color: rgb(0, 0, 0);
@@ -77,9 +73,6 @@ h1 {
     color: white;
 }
 
-#service div {
-    padding: 40px 10%;
-}
 
 p {
     animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;    
@@ -113,13 +106,17 @@ p {
         transform: rotate(360deg);
     }
 }
-
+#service div {
+    padding: 40px 10%;
+}
 
 #service div img {
     padding: 40px;
     border-radius: 80px;
 }
-
+#service div p{
+    font-size: 3vh;
+}
 .parallax {
     height: 400px;
     padding-top: 150px;
@@ -273,7 +270,7 @@ p {
     }
 
     section img {
-        width: 80%;
+        width: 100%;
 
     }
 
