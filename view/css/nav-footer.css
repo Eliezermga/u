@@ -1,17 +1,31 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sriracha&display=swap');
+:root{
+    --u-tech: #0061ff;
+    --u-cons: #8a4700;
+    --u-elec: #b21807;
+    --titre: "Poppins", sans-serif;
+    --sous-titre: bold 3vh "Josefin Sans", cursive;
+}
+
+
+
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Catamaran', sans-serif;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
 /*Partie des 3 icônes*/
-
+body{
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 400;
+}
 .navbar {
     padding: 1vw 25%;
 }
-.navbar ul{
+
+.navbar ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -20,9 +34,9 @@
 }
 
 .navbar img {
-    width: clamp(70px, 4vw, 100px);
+    width: clamp(80px, 4vw, 100px);
     height: auto;
-    padding: 10px;
+    padding: 5px;
 }
 
 
@@ -40,16 +54,38 @@
     border-top: 1px solid white;
 
 }
+
 .head ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .head li a {
-    transition: all 0.4s;
     border-radius: 5px;
     color: white;
+    position: relative;
+    outline: none !important;
+}
+
+.head li a::after {
+    background: none;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    width: 0;
+    transition: all 0.2s;
+    position: absolute;
+}
+
+.head li a:hover::after {
+    text-decoration: underline;
+    width: 100%;
+    background: white;
+    left: 0;
 }
 
 .head .icon {
@@ -80,15 +116,20 @@
 
     .head ul:not(:first-child) {
         display: none;
+        opacity: 0;
+        transition: opacity 1s ease-out;
+        will-change: opacity;
+
     }
 
     .head.responsive {
-        align-items:baseline;
+        align-items: baseline;
         height: fit-content;
         z-index: 2;
     }
 
     .head.responsive ul {
+        opacity: 1;
         z-index: 1;
         left: 0;
         padding-top: 50px;
@@ -110,7 +151,7 @@
         padding: 15px 0;
     }
 
-    .navbar img{
+    .navbar img {
         width: 50px;
         z-index: 3;
     }
@@ -119,14 +160,200 @@
 
 @keyframes fade-in-left {
     0% {
-      transform: translateX(-50px);
-      opacity: 0;
+        transform: translateX(-50px);
+        opacity: 0;
     }
+
     100% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
+}
+
+/* CSS pour l'effet de fondu */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(100px);
+    visibility: hidden;
+    transition: opacity 1s ease-out 0.5s, transform 2.2s ease-out 0.5s; /* Ajout du délai ici */
+    will-change: opacity, visibility;
+}
+
+.fade-in-section img {
+    transition-duration: 0.3s;
+    /* Image fades in faster */
+}
+
+.fade-in-section p {
+    transition-duration: 0.8s;
+    /* Text fades in slower */
+    transform: translateY(20px);
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+
+
+
+
+/*Corps de la page*/
+
+h1 {
+    font-family: 'Poppins';
+    font-size: clamp(25px, 3vw, 70px);
+    animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    padding: 20px 0;
+}
+
+h2{
+    font: var(--sous-titre);
+}
+
+
+h6 {
+    color: white;
+    font-size: clamp(20px, 1.5vw, 25px);
+    animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+
+}
+
+.first {
+    padding: 20px 10%;
+    color: white;
+    background-size: cover;
+}
+
+.first h6 {
+    padding-right: 40%;
+}
+
+.button {
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    transition: all 0.4s;
+    cursor: pointer;
+    border-radius: 40px;
+    border: 2px solid white;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+
+#taches{
+    text-align: center;
+    padding: 20px 5%;
+}
+
+#taches ul{
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px 0;
+}
+#taches li{
+    box-shadow: 0px 0px 15px 1px #888888;
+    height: 50vh;
+    background: white;
+    width: 280px;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 2vh;
+    transition: all 0.3s;
+}
+#taches li:hover{
+    height: 55vh;
+    width: 300px;
+    color: white;
+    font-size: 2.3vh;
+}
+#taches i{
+    font-size: 60px;
+}
+
+#taches h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+
+#realisations {
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    padding: 30px 2.5%;
+    font-size: clamp(20px, 1vw, 50px);
+}
+
+.splide {
+    margin: 0 15%;
+    padding: 50px 0;
+}
+
+.splide img {
+    height: 600px;
+    max-width: 600px;
+    object-fit: cover;
+    padding: 20px;
+}
+
+
+#team{
+    padding: 30px 10%;
+    text-align: center;
+}
+#team ul{
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+#team img{
+    background: white;
+    width: clamp(100px, 10vw, 200px);
+    border-radius:50% ;
+}
+#team li{
+    margin: 20px ;
+}
+#team a{
+    color: black;
+}
+
+
+
+@media screen and (max-width: 1023px) {
+
+    .first {
+        text-align: center;
+    }
+
+    .first h6 {
+        padding-right: 0;
+        line-height: 25px;
+    }
+
+    .button {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*footer*/
@@ -152,6 +379,7 @@
 
 .footer ul {
     list-style: none;
+    display: block;
 }
 
 
@@ -231,9 +459,10 @@
 
 /*responsivité*/
 @media(max-width: 767px) {
-    .footer1{
+    .footer1 {
         padding: 0 10%;
     }
+
     .footer-col {
         justify-content: left;
         margin-bottom: 30px;

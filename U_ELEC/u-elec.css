@@ -1,34 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&family=Poppins:wght@500&display=swap');
-
-.a{
+.a {
     text-decoration: none;
     color: white;
 }
-.ul{
+
+ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
-#a{
+
+#a {
     text-decoration: none;
 }
-#ul{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
+
+
+
 /*Partie des 3 icônes*/
 
-.navbar, .head {
-    background-color:#ff0000;
-}
 .head {
-    background-color:#ff0000;
+    background-color: var(--u-elec);
 }
 
-.u-elec{
+.head {
+    background-color: var(--u-elec);
+}
+
+.u-elec {
     border-radius: 10%;
-    background-color:rgb(255, 255, 255);
+    background-color: var(--u-elec);
+/*    border: solid 2px var(--u-elec);*/
 }
 
 
@@ -37,64 +37,37 @@
 
 /*-----Contenu-----*/
 
-h1{
-    font-family: 'Poppins';
-    font-size: clamp(25px, 3vw, 70px);
-    animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;    
 
-}
-h6{
-    color: white;
-    font-size: clamp(20px, 1.5vw, 25px);
-    animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;    
 
+h2{
+    color: var(--u-elec);
 }
-p{
+
+
+p {
     padding: 5%;
 }
-.first{
-    padding: 20px 10%;
-    color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url(./Media/electricite\ \(2\).jpg)no-repeat center;
-    background-size: cover;
-}
-.first h6{
-    padding-right: 40%;
-}
-.button{
-    padding: 20px;
-    color: white;
-    font-size: 20px;
-    background-color: #ff0000;
-    border: #ff0000 solid 2px;
-    border-radius: 40px;
-    transition: all 0.4s;
-    cursor: pointer;
-}
-.button:hover{
-    color: #ff0000;
-    background-color: white;
-    border: #ff0000 solid 2px;
 
+.first {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(./Media/electricite\ \(2\).jpg)no-repeat center;
 }
 
-.taches{
-    text-align: center;
-    padding: 20px 10%;
-    background: url(./Media/Polygon.svg) no-repeat center/cover fixed ;
+.button {
+    background-color: var(--u-elec);
 }
-.taches h1{
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: clamp(20px, 2vw, 70px);
+
+.button:hover {
+    color: var(--u-elec);
+    border: var(--u-elec) solid 2px;
 }
-.taches ul{
-    flex-wrap: wrap;
-    align-items: center;
+
+#taches {
+    background:  url(Media/u-elec.svg) no-repeat center/cover fixed;
 }
-.taches li{
+
+body #taches li {
     box-shadow: 0px 0px 15px 1px #888888;
-    height: 400px;
+    height: 42vh;
     width: 300px;
     margin: 10px;
     border-radius: 20px;
@@ -102,60 +75,38 @@ p{
     font-size: 20px;
     background: white;
     transition: all 0.3s;
-    animation: slide-in-bottom 1s ;
+    animation: slide-in-bottom 1s;
 }
+
 @keyframes slide-in-bottom {
     0% {
-      transform: translateY(1000px);
-      opacity: 0;
+        transform: translateY(1000px);
+        opacity: 0;
     }
+
     100% {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
-  
-.taches li:hover{
-    height: 440px;
-    color: white;
-    background-color: #ff0000;
 }
-.taches i{
+
+body #taches li:hover {
+    height: 44vh;
+    color: white;
+    background-color: var(--u-elec);
+}
+
+#taches i {
     color: #ffdd00 auto;
     font-size: 60px;
 }
 
-.taches h2{
-    font-size: 30px;
-    font-weight: bold;
-}
-.realisation{
-    background-color: rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 30px 2.5%;
-    font-size: clamp(20px, 1vw, 50px);
-}
-
-.splide{
-    margin: 0 15%;
-}
-.splide img{
-    height: 600px;
-    max-width: 600px;
-    object-fit: cover;
-}
 
 
-.team {
-    margin: 30px 10%;
-    font-size: 40px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-family: 'Catamaran', sans-serif;
+#team{
+    background: url(Media/u-elec.svg) no-repeat center/cover fixed;
 }
-
-
-.profiles{
+#profiles {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -163,9 +114,10 @@ p{
     margin: 30px;
 }
 
-.profile{
+.profile {
     margin: 20px;
 }
+
 .profile .profile-img {
     width: clamp(100px, 10vw, 200px);
     border-radius: 50%;
@@ -179,13 +131,14 @@ p{
 }
 
 
-.Services{
+.Services {
     background-color: rgb(182, 182, 182);
 }
 
 .services {
     text-align: center;
 }
+
 .services h1 {
     display: inline-block;
     text-transform: uppercase;
@@ -195,17 +148,20 @@ p{
     margin-top: 40px;
 
 }
-#image{
+
+#image {
     width: 80px;
 }
-.cen{
+
+.cen {
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
     padding: 20px;
     flex-wrap: wrap;
 }
-.service{
+
+.service {
     display: inline-block;
     width: calc(100% / 3);
     margin: 0 -2px;
@@ -214,16 +170,19 @@ p{
     cursor: pointer;
     transition: 0.4s;
 }
-.service:hover{
+
+.service:hover {
     background-color: #ddd;
 }
+
 .service h2 {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 500;
     margin: 0;
 }
-.service p{
+
+.service p {
     color: gray;
     font-size: 15px;
     font-weight: 500;
@@ -235,33 +194,26 @@ p{
 
 @media screen and (max-width: 1023px) {
 
-    .first{
-        text-align: center;
-    }
-    .first h6{
-        padding-right: 0;
-        line-height: 25px;
-    }
-    .button{
-        padding: 10px;
-        font-size: 15px;
-    }
-    .splide img{
+    .splide img {
         height: 400px;
         max-width: 200px;
     }
-    .taches li{
+
+    #taches li {
         height: fit-content;
     }
-    .taches li:hover{
+
+    #taches li:hover {
         height: fit-content;
     }
-    .service{
+
+    .service {
         display: flex;
         width: 100%;
         text-align: left;
     }
-  .ng-link-standalone:hover {
-  	text-decoration:underline;
-  }
+
+    .ng-link-standalone:hover {
+        text-decoration: underline;
+    }
 }
