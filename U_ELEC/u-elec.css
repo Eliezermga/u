@@ -42,7 +42,9 @@ ul {
 h2{
     color: var(--u-elec);
 }
-
+#taches h3{
+    font-size: 4vh;
+}
 
 p {
     padding: 5%;
@@ -67,12 +69,11 @@ p {
 
 body #taches li {
     box-shadow: 0px 0px 15px 1px #888888;
-    height: 42vh;
+    height: 44vh;
     width: 300px;
     margin: 10px;
     border-radius: 20px;
     padding: 30px;
-    font-size: 20px;
     background: white;
     transition: all 0.3s;
     animation: slide-in-bottom 1s;
@@ -91,14 +92,14 @@ body #taches li {
 }
 
 body #taches li:hover {
-    height: 44vh;
+    height: 46vh;
     color: white;
     background-color: var(--u-elec);
 }
 
 #taches i {
     color: #ffdd00 auto;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 
