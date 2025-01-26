@@ -1,32 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&family=Poppins:wght@500&display=swap');
-
-.a{
+.a {
     text-decoration: none;
     color: white;
 }
-.ul{
+
+ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
-#a{
+
+#a {
     text-decoration: none;
 }
-#ul{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
+
 /*Partie des 3 icônes*/
 
-.navbar, .head {
-    background-color: #0061ff;
+.head {
+    background-color: var(--u-tech);
 
 }
 
-.u-tech{
+.u-tech {
     border-radius: 10%;
-    background-color:rgb(255, 255, 255);
+    background-color: var(--u-tech);
 }
 
 
@@ -35,104 +31,41 @@
 
 /*-----Contenu-----*/
 
-h1{
-    font-family: 'Poppins';
-    font-size: clamp(25px, 3vw, 70px);
-    animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;    
 
+h2{
+    color: var(--u-tech);
 }
-h6{
-    font-size: clamp(20px, 1.5vw, 25px);
-    animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;    
 
-}
-p{
+
+p {
     padding: 5%;
 }
-.first{
-    padding: 20px 10%;
-    color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url(u-tech.jpg)no-repeat center;
-    background-size: cover;
-}
-.first h6{
-    padding-right: 40%;
-}
-.button{
-    padding: 20px;
-    color: white;
-    font-size: 20px;
-    background-color: #1b2bff;
-    border: #1b2bff solid 2px;
-    transition: all 0.4s;
-    cursor: pointer;
-    border-radius: 40px;
-}
-.button:hover{
-    color: #1b2bff;
-    background-color: white;
-}
-.taches{
-    text-align: center;
-    padding: 20px 10%;
-    background: url(Circuit.svg) no-repeat center/cover fixed ;
-}
-.taches h1{
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: clamp(20px, 2vw, 70px);
-}
-.taches ul{
-    flex-wrap: wrap;
-    align-items: center;
-}
-.taches li{
-    box-shadow: 0px 0px 15px 1px #888888;
-    height: 400px;
-    background: white;
-    width: 280px;
-    margin: 10px;
-    border-radius: 20px;
-    padding: 30px;
-    font-size: 2.5vh;
-    transition: all 0.3s;
-}
-.taches li:hover{
-    height: 440px;
-    width: 300px;
-    color: white;
-    font-size: 3vh;
-    background-color: #415aff;
-}
-.taches i{
-    color: #415aff auto;
-    font-size: 60px;
+
+.first {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(u-tech.jpg)no-repeat center;
 }
 
-.taches h2{
-    font-size: 30px;
-    font-weight: bold;
+.button {
+    background-color: #1b2bff;
+    border: #1b2bff solid 2px;
 }
-.team{
-    padding: 30px 10%;
-    background: #ebebeb;
+
+.button:hover {
+    color: #1b2bff;
 }
-.team ul{
-    font-size: 1.1rem;
-    flex-wrap: wrap;
-    text-align: center;
+
+#taches {
+    background: url(u-tech.svg) no-repeat center/cover fixed;
 }
-.team img{
-    background: white;
-    width: clamp(100px, 10vw, 200px);
-    border-radius:50% ;
+
+#taches li:hover {
+    background-color: #415aff;
 }
-.team li{
-    margin: 20px ;
+
+#taches i {
+    color: #415aff auto;
 }
-.team a{
-    color: black;
-}
+
 
 
 
@@ -140,37 +73,28 @@ p{
 
 @media screen and (max-width: 1023px) {
 
-    .first{
-        text-align: center;
-    }
-    .first h6{
-        padding-right: 0;
-        line-height: 25px;
-    }
-    .button{
-        font-size: 15px;
-        padding: 10px;
-    }
-    .taches h1{
+    #taches h1 {
         font-size: 20px;
     }
-    .taches h2{
+
+    #taches h2 {
         font-size: 22px;
     }
-    .taches li{
+
+    #taches li {
         padding: 20px;
         height: fit-content;
     }
 
-    .taches i{
+    #taches li:hover {
+        height: fit-content;
+    }
+
+    #taches i {
         font-size: 25px;
     }
-  .ng-link-standalone:hover {
-  	text-decoration:underline;
-  }
+
+    .ng-link-standalone:hover {
+        text-decoration: underline;
+    }
 }
-
-
-
-
-

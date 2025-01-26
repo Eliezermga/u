@@ -61,7 +61,7 @@
     -ms-flex-negative: 0;
     flex-shrink: 0;
     list-style-type: none !important;
-    margin: 0;
+    margin-left: -15px ;
     position: relative
 }
 

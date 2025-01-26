@@ -1,29 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&family=Poppins:wght@500&display=swap');
-
-a{
+a {
     text-decoration: none;
 }
 
-.ul{
+ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
-#ul{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
+
+
 /*Partie des 3 icônes*/
 
-.navbar, .head {
-    background-color: #784800;
+.head {
+    background-color: var(--u-cons);
 
 }
 
-.u-cons{
+.u-cons {
     border-radius: 10%;
-    background-color:rgb(255, 255, 255);
+    background-color: var(--u-cons);
 }
 
 
@@ -33,130 +28,57 @@ a{
 
 /*-----Contenu-----*/
 
-h1{
-    font-family: 'Poppins';
-    font-size: clamp(25px, 3vw, 70px);
-    animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;    
 
+h2{
+    color: var(--u-cons);
 }
 
-h6{
-    font-size: clamp(20px, 1.5vw, 25px);
-    animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;    
-
-}
-p{
+p {
     padding: 5%;
 }
-.first{
-    padding: 20px 10%;
-    color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url(./images/batiment\ \(1\).jpg)no-repeat center;
-    background-size: cover;
+
+.first {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(./images/batiment\ \(1\).jpg)no-repeat center;
 }
 
-.button{
-    padding: 20px;
-    color: white;
-    font-size: 20px;
+.button {
     background-color: #d1a300;
     border: #d1a300 solid 2px;
-    transition: all 0.4s;
-    cursor: pointer;
-    border-radius: 40px;
 }
-.button:hover{
+
+.button:hover {
     color: #d1a300;
-    background-color: white;
+    border: #d1a300 2px solid;
+
 }
-.taches{
-    text-align: center;
-    padding: 20px 10%;
-    background: url(./images/wave.svg) no-repeat center/cover fixed ;
+
+#taches {
+    background: url(./images/u-cons.svg) no-repeat center/cover fixed;
 }
-.taches h1{
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: clamp(20px, 2vw, 70px);
-}
-.taches ul{
-    flex-wrap: wrap;
-    align-items: center;
-}
-.taches li{
-    box-shadow: 0px 0px 15px 1px #888888;
-    height: 400px;
-    width: 300px;
-    margin: 10px;
-    border-radius: 20px;
-    padding: 30px;
-    font-size: 20px;
-    background: white;
-    transition: all 0.3s;
-    animation: slide-in-bottom 1s ;
-}
+
 @keyframes slide-in-bottom {
     0% {
-      transform: translateY(1000px);
-      opacity: 0;
+        transform: translateY(1000px);
+        opacity: 0;
     }
+
     100% {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
-  
-.taches li:hover{
-    height: 440px;
-    color: white;
+}
+
+#taches li:hover {
     background-color: #ffae00;
 }
-.taches i{
+
+#taches i {
     color: #ffdd00 auto;
-    font-size: 60px;
-}
-
-.taches h2{
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.realisation{
-    background-color: rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 30px 2.5%;
-    font-size: clamp(20px, 1vw, 50px);
-}
-
-.splide{
-    margin: 0 15%;
-}
-.splide img{
-    height: 600px;
-    max-width: 600px;
-    object-fit: cover;
-    padding: 20px;
 }
 
 
-.team{
-    padding: 30px 10%;
-}
-.team ul{
-    font-size: 1.1rem;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.team img{
-    background: white;
-    width: clamp(100px, 10vw, 200px);
-    border-radius:100% ;
-}
-.team li{
-    margin: 20px ;
-}
-.team a{
-    color: black;
+#team{
+    background: url(./images/u-cons.svg) no-repeat center/cover fixed;
 }
 
 
@@ -165,45 +87,34 @@ p{
 
 @media screen and (max-width: 1023px) {
 
-    .first{
-        text-align: center;
-    }
-    .first h6{
-        padding-right: 0;
-        line-height: 25px;
-    }
-    .button{
-        font-size: 15px;
-        padding: 10px;
-    }
-    .taches h1{
+    #taches h1 {
         font-size: 20px;
     }
-    .taches h2{
+
+    #taches h3 {
         font-size: 22px;
     }
-    .taches li{
+
+    #taches li {
         height: fit-content;
         font-size: 18px;
         padding: 20px;
     }
-    .taches li:hover{
+
+    #taches li:hover {
         height: fit-content;
     }
-    .taches i{
+
+    #taches i {
         font-size: 25px;
     }
-    .splide img{
+
+    .splide img {
         height: 400px;
         max-width: 200px;
         object-fit: cover;
-        padding: 0 ;
+        padding: 0;
     }
-    
+
 
 }
-
-
-
-
-
